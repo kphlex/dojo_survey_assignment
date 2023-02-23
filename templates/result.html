@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <h2>Name:{{ session['name']}}</h2>
+    <p>
+        Age: {{ session['age'] }} <br>
+        Location: {{ session['location'] }} <br>
+        Language: {{ session['language'] }} <br>
+        Comments: {{ session['comments'] }} <br>
+    </p>
+    <a href='/'>Home</a>
+
+{% endblock %}

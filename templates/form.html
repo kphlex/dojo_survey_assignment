@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h2>Dojo Survey</h2>
+<form action="/process" method="POST">
+    <div class = "mb-3">
+        <label for="inputName">Name:</label>
+        <input name='name'type="text" class="form-control" id="input_name">
+    </div>
+    <div class="mb-3">
+        <label for="inputDescription">Age:</label>
+        <div class="form-check form-check-inline">
+            <input name='age' class="form-check-input" type="radio"  id="inlineRadio1" value="18-25">
+            <label class="form-check-label" for="inlineRadio1">18-25</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input name='age' class="form-check-input" type="radio"  id="inlineRadio2" value="26-33">
+            <label class="form-check-label" for="inlineRadio2">26-33</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input name='age' class="form-check-input" type="radio"  id="inlineRadio3" value="34-41">
+            <label class="form-check-label" for="inlineRadio3">34-41</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input name='age'class="form-check-input" type="radio"  id="inlineRadio4" value="42-49+">
+            <label class="form-check-label" for="inlineRadio3">42-49+</label>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Dojo Location:</label>
+        <select name='location' class="form-select" aria-label="Default select example">
+            <option selected>Select Location</option>
+            <option name='location' value="Online">Online</option>
+            <option name='location' value="Chicago">Chicago</option>
+            <option name='location' value="Seattle">Seattle</option>
+            <option name='location' value="New York">New York</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="language" class="form-label">Favorite Language:</label>
+        <select name='language' class="form-select" aria-label="Default select example">
+            <option selected>Select a language</option>
+            <option name='language' value="C#">C#</option>
+            <option name='language' value="Java">Java</option>
+            <option name='language' value="Javascript">Javascript</option>
+            <option name='language' value="Python">Python</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="comment" class="form-label">Comments:</label>
+        <textarea name='comment' class="form-control" id="input_comment" rows="3"></textarea>
+    </div>
+    <div class="form-check">
+        <input name='news' class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+        Send me Coding Dojo news!
+        </label>
+    </div>
+    <button class='btn'>Submit</button>
+</form>
+
+{% endblock %}
